@@ -13,6 +13,7 @@
 // own
 #include "umacDisp.h"
 
+// 文字表示のX座標 1文字目～4文字目
 #define CHAR1X (20)
 #define CHAR2X (40)
 #define CHAR3X (60)
@@ -48,6 +49,7 @@ void umacDisp_SetTemp(float temp)
 		// 2桁目が0の時は空白を表示
 		lmacDisp_SetChar(EDispNum_1, CHAR1X, 0, 11, FONT_WIDTH);
 	} else {
+		// 2桁目の表示
 		lmacDisp_SetChar(EDispNum_1, CHAR1X, 0, dec10,	FONT_WIDTH);
 	}
 	lmacDisp_SetChar(EDispNum_1, CHAR2X, 0, dec01,	FONT_WIDTH);

@@ -225,7 +225,7 @@ void deviceQMP6988_Initialize(I2C_HandleTypeDef *i2c_handle)
 	val[0] = 0xFF;
 	HAL_I2C_Mem_Write(hi2c, QMP6988_I2C_ADDR, 0xF4, I2C_MEMADD_SIZE_8BIT, val, 1, 1000);
 
-
+	// キャリブレーション値の取得
 	CalibrationDataGet();
 }
 

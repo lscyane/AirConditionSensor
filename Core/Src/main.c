@@ -114,7 +114,7 @@ int main(void)
   MX_TIM1_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-  HAL_Delay(100);
+  HAL_Delay(100);			// デバイスの立ち上がり待ち（時間適当）
   lmacEnvSens_Initialize();
   HAL_Delay(100);
   lmacDisp_Initialize();

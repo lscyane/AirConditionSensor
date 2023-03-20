@@ -16,6 +16,7 @@
 /* Private define ------------------------------------------------------------*/
 #define SSD1780_I2C_ADDR	(0x78)
 
+// LCDの信号線有効無効制御
 #define LCD_DN_ENABLE		HAL_GPIO_WritePin(LCD_UP_CS_GPIO_Port, LCD_UP_CS_Pin, GPIO_PIN_SET);	HAL_Delay(1);
 #define LCD_DN_DISABLE		HAL_GPIO_WritePin(LCD_UP_CS_GPIO_Port, LCD_UP_CS_Pin, GPIO_PIN_RESET);	HAL_Delay(1);
 #define LCD_UP_ENABLE		HAL_GPIO_WritePin(LCD_DN_CS_GPIO_Port, LCD_DN_CS_Pin, GPIO_PIN_SET);	HAL_Delay(1);

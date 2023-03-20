@@ -13,10 +13,6 @@
 #include "deviceSHT31.h"
 #include "deviceQMP6988.h"
 #include "umacDisp.h"
-// debug
-#include <stdio.h>
-#include <string.h>
-#include "usbd_cdc_if.h"
 // own
 #include "lmacEnvironmentalSensor.h"
 
@@ -60,17 +56,6 @@ void lmacEnvSens_MainLoop(void)
 	// CO2の取得、表示
 	float co2 = deviceMHZ19C_GetCO2();
 	umacDisp_SetCo2(co2);
-
-	/*
-	// debug
-	char string[100];
-	uint16_t stlen = snprintf(string, sizeof(string), "%f / %f\r\n", s_t, s_rh);
-	CDC_Transmit_FS((uint8_t *)string, stlen);
-	stlen = snprintf(string, sizeof(string), "%f hPa  %f ppm\r\n",air_pressure, co2);
-	CDC_Transmit_FS((uint8_t *)string, stlen);
-	*/
-
-	//HAL_Delay(1000);
 }
 
 
